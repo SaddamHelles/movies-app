@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { StyledContainer } from "./commponents/Container/Container";
+import { StyledHeader } from "./commponents/Header";
+import { StyledPopularMoviesTitle } from "./commponents/PopularMoviesTitle";
+import { StyledSingleMovie } from "./commponents/SingleMovie";
+import bgImage from "./images/BackgroundImage.jpeg";
+const StyleIcon = {
+  width: "60px",
+  marginTop: "5px",
+};
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <StyledContainer>
+      <StyledHeader>
+        <img
+          style={StyleIcon}
+          src={require("./images/free-movies-icon-16.jpg")}
+          alt="Icon"
+        />
+        {/* <a
+          style={{
+            textDecoration: "none",
+            alignContent: "center",
+          }}
+          href="https://www.netflix.com/ps-en/browse/genre/7424"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+        </a> */}
+        React Movie
+      </StyledHeader>
+      <StyledSingleMovie urlImage={bgImage} />
+      <StyledPopularMoviesTitle>Popular Movies</StyledPopularMoviesTitle>
+    </StyledContainer>
   );
 }
 
