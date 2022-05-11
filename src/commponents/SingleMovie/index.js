@@ -5,6 +5,6 @@ export const StyledSingleMovie = styled.div`
   background-image: url(${({ urlImage }) => urlImage});
   padding: 2px;
   margin: 4px;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 `;

@@ -8,7 +8,7 @@ import { StyledSingleMovie } from "./commponents/SingleMovie";
 import bgImage from "./images/BackgroundImage.jpeg";
 import urlCardImage from "./images/urlCardImage.jpeg";
 const StyleIcon = {
-  width: "60px",
+  width: "160px",
   marginTop: "5px",
 };
 function App() {
@@ -20,7 +20,7 @@ function App() {
           src={require("./images/free-movies-icon-16.jpg")}
           alt="Icon"
         />
-        <a
+        {/* <a
           style={{
             textDecoration: "none",
             alignContent: "center",
@@ -29,7 +29,7 @@ function App() {
           href="https://www.netflix.com/ps-en/browse/genre/7424"
         >
           React Movie
-        </a>
+        </a> */}
       </StyledHeader>
       <StyledSingleMovie urlImage={bgImage} />
       <StyledPopularMoviesTitle>Popular Movies</StyledPopularMoviesTitle>
