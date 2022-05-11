@@ -4,13 +4,20 @@ import { StyledContainer } from "./commponents/Container/Container";
 import { StyledContainerCards } from "./commponents/ContainerCards";
 import { StyledHeader } from "./commponents/Header";
 import { StyledPopularMoviesTitle } from "./commponents/PopularMoviesTitle";
+import { StyledPopupMovie } from "./commponents/PopupMovie";
 import { StyledSingleMovie } from "./commponents/SingleMovie";
 import bgImage from "./images/BackgroundImage.jpeg";
 import urlCardImage from "./images/urlCardImage.jpeg";
+import popupImage from "./images/PopupSingleImage.jpeg";
 
 const StyleIcon = {
-  width: "160px",
+  width: "200px",
   marginTop: "5px",
+  marginLeft: "60px",
+  cursor: "pointer",
+};
+const StylePopup = {
+  left: "0px",
   cursor: "pointer",
 };
 function App() {
@@ -35,7 +42,18 @@ function App() {
           React Movie
         </a> */}
       </StyledHeader>
-      <StyledSingleMovie urlImage={bgImage} />
+      <StyledSingleMovie urlImage={bgImage}>
+        <StyledPopupMovie>
+          <img
+            style={StylePopup}
+            src={require("./images/PopupSingleImage.jpeg")}
+            alt="Icon"
+          />
+          <h2 style={{ color: "white", paddingLeft: "20px" }}>
+            Movie's Name and its Onformation
+          </h2>
+        </StyledPopupMovie>
+      </StyledSingleMovie>
       <StyledPopularMoviesTitle>Popular Movies</StyledPopularMoviesTitle>
       <StyledContainerCards>
         <StyledCardMovies urlCardImage={urlCardImage} />
