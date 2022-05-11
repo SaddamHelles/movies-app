@@ -7,19 +7,23 @@ import { StyledPopularMoviesTitle } from "./commponents/PopularMoviesTitle";
 import { StyledSingleMovie } from "./commponents/SingleMovie";
 import bgImage from "./images/BackgroundImage.jpeg";
 import urlCardImage from "./images/urlCardImage.jpeg";
+
 const StyleIcon = {
   width: "160px",
   marginTop: "5px",
+  cursor: "pointer",
 };
 function App() {
   return (
     <StyledContainer>
       <StyledHeader>
-        <img
-          style={StyleIcon}
-          src={require("./images/free-movies-icon-16.jpg")}
-          alt="Icon"
-        />
+        <a href="http://www.netflix.com/ps-en/browse/genre/7424">
+          <img
+            style={StyleIcon}
+            src={require("./images/free-movies-icon-16.jpg")}
+            alt="Icon"
+          />
+        </a>
         {/* <a
           style={{
             textDecoration: "none",
